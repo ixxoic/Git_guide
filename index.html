@@ -12,17 +12,18 @@
 <body>
   <div id="app"></div>
   <script>
-    // 自动检测是否为 GitHub Pages（项目页面需要 basePath）
-    var isGitHubPages = window.location.hostname === 'ixxoic.github.io';
+    // 自动检测环境并设置 basePath
+    var hostname = window.location.hostname;
+    var isGitHubPages = hostname === 'ixxoic.github.io';
     var basePath = isGitHubPages ? '/Git_guide/' : '/';
 
     window.$docsify = {
       name: 'Git 速查',
       repo: 'ixxoic/Git_guide',
-      loadSidebar: true,          // 自动生成侧边栏
+      loadSidebar: '_sidebar.md', // 明确指定侧边栏文件名
       auto2top: true,
       subMaxLevel: 3,             // 标题层级
-      basePath: basePath          // 本地开发用 /，GitHub Pages 用 /Git_guide/
+      basePath: basePath          // 本地用 /，GitHub Pages 用 /Git_guide/
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
