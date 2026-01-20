@@ -14,10 +14,14 @@
   <script>
     window.$docsify = {
       name: 'Git 速查',
-      repo: 'ixxioc/git-guide',
+      repo: 'ixxoic/Git_guide',
       loadSidebar: true,          // 自动生成侧边栏
       auto2top: true,
-      subMaxLevel: 3              // 标题层级
+      subMaxLevel: 3,             // 标题层级
+      basePath: '/Git_guide/',    // GitHub Pages 项目页面路径
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'  // 确保侧边栏在所有路径下都能加载
+      }
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
